@@ -11,7 +11,7 @@
       bg-white
       p-4
       shadow-md">
-      <a href="/" class="
-      text-3xl font-mono">cartrader</a>
+      <NuxtLink to="/" class="
+      text-3xl font-mono">cartrader</NuxtLink>
     </header>
 </template>
