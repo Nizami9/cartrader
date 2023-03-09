@@ -17,7 +17,6 @@
                 <CarDescription/>
                 <CarDetails/>
         </div>
-
 </div>
 </template>
 <script setup></script>
