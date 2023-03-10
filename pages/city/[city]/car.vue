@@ -19,4 +19,9 @@
 </div>
 </div>
 </template>
-<script setup></script>
+<script setup>
+const route = useRoute()
+useHead({
+    title: `${route.params.make ? route.params.make : 'Cars'} in ${route.params.city}`
+})
+</script>
