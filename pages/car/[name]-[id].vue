@@ -1,5 +1,5 @@
 <template>
-    <div v-if="car">
+    <div>
                 <CarHeroDetails :car="car"/>
                 <CarAttributes :features="car.features"/>
                 <CarDescription :description="car.description"/>
