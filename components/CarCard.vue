@@ -1,6 +1,7 @@
 <template>
-     <div @click="navigateTo(`/car/${car.name}-${car.id}`)" class="shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
-      <div class="flex h-full">
+     <div class="relative shadow border w-full overflow-hidden mb-5 cursor-pointer h-[200px]">
+      <img class="absolute w-7 right-5 top-2 z-20" :src="favored ? heartFilled : heartOutline" @click="favored = !favored">
+      <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
         <NuxtImg :src="car.url" class="w-[300px] h-full" alt="car1"></NuxtImg>
         <div class="p-4 flex flex-col">
           <div>
@@ -12,7 +13,15 @@
       </div>
     </div>
 </template>
+
 <script setup>
+import heartFilled from "@/assets/images/heartFilled.png"
+import heartOutline from "@/assets/images/heartOutline.png"
+
+const favored = useState('favored', () => {
+  return false;
+})
+
 const props = defineProps({
   car: Object
 }) 
