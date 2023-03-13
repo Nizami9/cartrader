@@ -23,7 +23,8 @@ import heartOutline from "@/assets/images/heartOutline.png"
 // })
 
 const props = defineProps({
-  car: Object
+  car: Object,
+  favored: Boolean
 }) 
 
 const emit = defineEmits(['favor'])

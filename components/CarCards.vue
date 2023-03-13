@@ -1,14 +1,15 @@
 <template>
       <div class="w-full">
-        <CarCard v-for="car in cars" :key="car.id" :car="car" @favor="handleFavorite" :favored="car.id in favorite"/>
+        <ClientOnly>
+          <CarCard v-for="car in cars" :key="car.id" :car="car" @favor="handleFavorite" :favored="car.id in favorite"/>
+        </ClientOnly>
       </div>
 </template>
 
 <script setup>
 const {cars} = useCars();
 
-const favorite = useLocalStorage('favorite', {
-});
+const favorite = useLocalStorage('favorite', {});
 
 const handleFavorite = (id) => {
   if(id in favorite.value) {
