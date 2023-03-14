@@ -3,6 +3,7 @@
         <CarCards :cars="cars"/>
     </div>
 </template>
+
 <script setup>
 const route = useRoute()
 const cars = await useFetchCars(route.params.city, {
