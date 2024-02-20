@@ -19,7 +19,7 @@ const handleFavorite = (id) => {
     favorite.value = {
       ...favorite.value,
       [id]: true
-    }
+    };
   }
-}
+};
 </script>
